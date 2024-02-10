@@ -1,9 +1,10 @@
 function slugify(title) {
-    title = title.toLowerCase();
-    const words = title.split(" "); // Використовуємо метод split для розділення рядка на слова
-    const slug = words.join("-"); // Використовуємо метод join для з'єднання слів тире
+    const lowercasedTitle = title.toLowerCase();
+    const words = lowercasedTitle.split(" ");
+    const slug = words.join("-");
     return slug;
 }
+
 console.log(slugify("Arrays for begginers")); // "arrays-for-begginers"
 console.log(slugify("English for developer")); // "english-for-developer"
 console.log(slugify("Ten secrets of JavaScript")); // "ten-secrets-of-javascript"
